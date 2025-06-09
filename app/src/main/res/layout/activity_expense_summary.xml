@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    android:id="@+id/ExpenseSummary">
+
+
+  <!-- Header -->
+  <TextView
+      android:id="@+id/tvSummaryTitle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Expense Summary"
+      android:textSize="24sp"
+      android:textColor="@color/add"
+      android:textStyle="bold"
+      android:gravity="center"
+      android:layout_marginBottom="24dp" />
+  <ImageView
+      android:id="@+id/btnBack"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_margin="16dp"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentStart="true"
+      android:src="@drawable/back"
+      android:contentDescription="Back"
+      android:backgroundTint="@color/add"
+      android:visibility="gone" />
+
+  <!-- Pie Chart Card -->
+  <com.google.android.material.card.MaterialCardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="12dp"
+      app:cardElevation="4dp"
+      app:cardBackgroundColor="@android:color/white"
+      android:layout_marginBottom="24dp">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_margin="8dp" />
+  </com.google.android.material.card.MaterialCardView>
+
+  <!-- Total Spent Card -->
+  <com.google.android.material.card.MaterialCardView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:cardCornerRadius="8dp"
+      app:cardElevation="2dp"
+      android:layout_marginBottom="16dp"
+      app:cardBackgroundColor="#F3E5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Total Spent"
+          android:textSize="16sp"
+          android:textColor="#757575"
+          android:layout_marginBottom="4dp"/>
+
+      <TextView
+          android:id="@+id/tvTotalSpent"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="R0.00"
+          android:textSize="28sp"
+          android:textColor="@color/add"
+          android:textStyle="bold"/>
+
+
+
+    </LinearLayout>
+
+  </com.google.android.material.card.MaterialCardView>
+
+
+  <!-- Bottom-left summary FAB -->
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fabSummary"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      android:layout_margin="16dp"
+      android:backgroundTint="@color/add"
+      android:contentDescription="Summary"
+      app:srcCompat="@drawable/summary" />
+
+  <!-- Bottom-center dashboard FAB -->
+  <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/fabDashboard"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="16dp"
+      android:backgroundTint="@color/add"
+      android:contentDescription="Dashboard"
+      app:srcCompat="@drawable/home" />
+
+</LinearLayout>

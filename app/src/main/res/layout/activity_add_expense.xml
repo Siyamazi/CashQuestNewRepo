@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@android:color/white"
+    android:id="@+id/AddExpense">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add New Expense"
+            android:textSize="22sp"
+            android:textColor="@color/add"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>\
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="16dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/back"
+            android:contentDescription="Back"
+            android:backgroundTint="@color/add"
+            android:visibility="gone" />
+
+        <!-- Expense Title -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/add"
+            app:hintTextColor="@color/add"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etExpenseTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Expense Title"
+                android:textColor="#212121"
+                android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Amount -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/add"
+            app:hintTextColor="@color/add"
+            app:prefixText="$"
+            app:prefixTextColor="@color/add"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etExpenseAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount"
+                android:textColor="#212121"
+                android:inputType="numberDecimal"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Note -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="@color/add"
+            app:hintTextColor="@color/add"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etExpenseNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Note (optional)"
+                android:textColor="#212121"
+                android:inputType="textCapSentences"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Category Selection -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Category"
+            android:textColor="@color/add"
+            android:backgroundTint="@android:color/transparent"
+            app:strokeColor="@color/add"
+            app:strokeWidth="1dp"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/category"
+            app:iconTint="@color/add"
+            android:layout_marginTop="8dp"
+            android:textAllCaps="false"/>
+
+        <!-- Selected Category Display -->
+        <TextView
+            android:id="@+id/tvSelectedCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No category selected"
+            android:textColor="#757575"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textStyle="italic"/>
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmitExpense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Expense"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/add"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/save"
+            app:iconTint="@android:color/white"
+            android:layout_marginTop="32dp"
+            android:textAllCaps="false"/>
+        <!-- FAB: Go to Expense Summary -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="16dp"
+            android:contentDescription="Go to Summary"
+            app:srcCompat="@drawable/_graph"
+            android:backgroundTint="@color/add"/>
+
+        <!-- FAB: Go to Dashboard -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabDashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:contentDescription="Dashboard"
+            app:srcCompat="@drawable/home"
+            android:backgroundTint="@color/add"/>
+
+        <!-- Back Button: Only visible when not in Dashboard -->
+
+    </LinearLayout>
+
+</ScrollView>

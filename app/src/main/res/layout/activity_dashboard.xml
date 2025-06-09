@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:ignore="ExtraText">
+
+    <TextView
+        android:id="@+id/tvBudgetWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/warning_background"
+        android:clickable="true"
+        android:contentDescription="Tap to update your budget"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:padding="16dp"
+        android:text="⚠ You have exceeded your budget."
+        android:textAlignment="center"
+        android:textColor="#B71C1C"
+        android:textStyle="bold"
+        android:visibility="gone" />
+    <!-- Header Section -->
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="68dp"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:src="@drawable/profile">
+
+    </ImageView>
+    <!-- Buttons Section -->
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Welcome, User!"
+            android:textColor="@color/add"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/tvMonthlyBudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:text="Monthly Budget: R0.00"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <!-- Replace with your placeholder -->
+        android:scaleType="centerCrop"
+        android:layout_margin="8dp"
+        android:background="@drawable/circle_background"
+        android:clickable="true"
+        android:focusable="true"/>
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddExpense"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/add"
+                android:text="Add Expense"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/expense"
+                app:iconTint="@color/ColourActive" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddCategory"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Add Category"
+                android:textAllCaps="false"
+                android:textColor="@color/add"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/category"
+                app:iconTint="@color/add"
+                app:strokeColor="@color/add" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewSummary"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Expense Summary"
+                android:textAllCaps="false"
+                android:textColor="@color/add"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/summary"
+                app:iconTint="@color/add"
+                app:strokeColor="@color/add" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewExpenses"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="View All Expenses"
+                android:textAllCaps="false"
+                android:textColor="@color/add"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/list"
+                app:iconTint="@color/add"
+                app:strokeColor="@color/add" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddBudget"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Add Monthly Budget"
+                android:textAllCaps="false"
+                android:textColor="@color/add"
+                app:cornerRadius="8dp"
+                app:icon="@drawable/calender"
+                app:iconTint="@color/add"
+                app:strokeColor="@color/add" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Logout Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnLogout"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/red"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:cornerRadius="8dp"
+        app:icon="@drawable/logout"
+        app:iconTint="@color/white"
+        app:strokeColor="@color/black" />
+    <!-- FAB: Go to Expense Summary -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/add"
+        android:contentDescription="Go to Summary"
+        app:srcCompat="@drawable/_graph" />
+
+    <!-- FAB: Go to Dashboard -->
+
+    <!-- Back Button: Only visible when not in Dashboard -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDashboard"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/add"
+        android:contentDescription="Dashboard"
+        app:srcCompat="@drawable/home" />
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        android:src="@drawable/back"
+        android:visibility="gone" />
+
+</LinearLayout>
